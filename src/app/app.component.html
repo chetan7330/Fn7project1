@@ -1,0 +1,49 @@
+<div class="p-6 max-w-2xl mx-auto bg-cyan-400 text-black rounded-xl space-y-6 shadow-lg">
+  <h1 class="text-3xl font-bold text-center"> User Form</h1>
+
+  <!-- Main Form -->
+  <div *ngIf="!showFeedbackForm">
+    <jsonforms
+      [data]="data"
+      [schema]="schema"
+      [uischema]="uischema"
+      [renderers]="renderers"
+      (change)="onChange($event)">
+    </jsonforms>
+
+    <button
+  class="w-full mt-4 py-3 bg-gradient-to-r from-black to-gray-600 hover:from-gray-800 hover:to-black text-white font-semibold rounded-xl shadow"
+  (click)="onSubmit()">
+  🚀 Submit
+ <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      </head>
+      <body>
+        
+      </body>
+      </html>
+    </button>
+  </div>
+
+  <!-- Feedback Form -->
+  <div *ngIf="showFeedbackForm">
+    <h2 class="text-2xl font-semibold mb-4">💬 Feedback</h2>
+    <jsonforms
+      [data]="feedbackData"
+      [schema]="feedbackSchema"
+      [uischema]="feedbackUiSchema"
+      [renderers]="renderers"
+      (change)="onFeedbackChange($event)">
+    </jsonforms>
+
+    <button
+      class="w-full mt-4 py-3 bg-orange-500 hover:bg-green-600 text-white font-semibold rounded-xl shadow"
+      (click)="onFeedbackSubmit()">
+      ✅ Submit Feedback
+    </button>
+  </div>
+</div>
