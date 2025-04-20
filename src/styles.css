@@ -1,0 +1,71 @@
+.app-layout {
+  @apply flex h-screen bg-slate-100 text-slate-800;
+}
+
+.sidebar {
+  @apply w-64 bg-blue-700 text-white p-6 space-y-6 hidden md:block;
+}
+
+.sidebar-title {
+  @apply text-2xl font-bold;
+}
+
+.sidebar-nav {
+  @apply space-y-4;
+}
+
+.nav-link {
+  @apply block hover:text-blue-200;
+}
+
+.main-content {
+  @apply flex-1 p-6 overflow-auto;
+}
+
+.main-header {
+  @apply bg-white shadow-md rounded-xl p-4 mb-6 flex justify-between items-center;
+}
+
+.main-title {
+  @apply text-3xl font-bold text-blue-700;
+}
+
+.logout-button {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700;
+}
+
+.form-card {
+  @apply bg-white rounded-xl shadow p-6 space-y-4;
+}
+
+.form-title {
+  @apply text-xl font-semibold text-blue-600;
+}
+
+.form-section {
+  @apply space-y-4;
+}
+
+.form-group {
+  @apply space-y-1;
+}
+
+.form-label {
+  @apply block mb-1;
+}
+
+.form-input {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.form-checkbox {
+  @apply flex items-center space-x-3;
+}
+
+.checkbox {
+  @apply form-checkbox h-5 w-5 text-blue-600 rounded;
+}
+
+.submit-button {
+  @apply bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all;
+}
